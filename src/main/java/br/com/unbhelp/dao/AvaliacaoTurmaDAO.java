@@ -21,7 +21,7 @@ public class AvaliacaoTurmaDAO {
 
     public AvaliacaoTurma buscarAvaliacaoTurma(Integer id) {
         String sql = "SELECT * FROM avaliacoes_turmas WHERE id = ?";
-        return jdbc.queryForObject(sql, new Object[]{id}, new AvaliacaoTurmaRowMapper());
+        return jdbc.queryForObject(sql, new AvaliacaoTurmaRowMapper(), new Object[]{id});
     }
 
     public List<AvaliacaoTurma> listarAvaliacoesTurma(Integer turmaId) {
