@@ -61,6 +61,17 @@ public class Database implements CommandLineRunner {
                 "FOREIGN KEY (disciplina_id) REFERENCES disciplinas (id), " +
                 "FOREIGN KEY (professor_id) REFERENCES professores (id)" +
                 ")");
+
+        //Tabela AvaliacoesTurmas
+        jdbc.execute("CREATE TABLE IF NOT EXISTS avaliacoes_turmas(" +
+                "id SERIAL PRIMARY KEY, " +
+                "avaliacao TEXT NOT NULL," +
+                "nota INT NOT NULL, " +
+                "matricula_estudante VARCHAR(9) NOT NULL," +
+                "id_turma INT NOT NULL, " +
+                "FOREIGN KEY (matricula_estudante) REFERENCES estudantes (matricula), " +
+                "FOREIGN KEY (id_turma) REFERENCES turmas (id)" +
+                ")");
     }
 
 }
