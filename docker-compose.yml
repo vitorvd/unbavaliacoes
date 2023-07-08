@@ -10,5 +10,19 @@ services:
       POSTGRES_DB: unbavaliacoes
     ports:
       - 5432:5432
-    volumes:
-      - ./data:/var/lib/postgresql/data
+    networks:
+      - unbavaliacoes-network
+  backend:
+    container_name: unbavaliacoes-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks:
+      - unbavaliacoes-network
+
+networks:
+  unbavaliacoes-network:
