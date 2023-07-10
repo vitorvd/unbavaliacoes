@@ -1,8 +1,0 @@
-<div [formGroup]="formGroup" class="input-container">
-  <label>{{label}}:</label>
-  <select formControlName="{{formName}}" (change)="onChange($event.target)">
-    <option selected value="">Selecione</option>
-    <option *ngFor="let item of itens" [selected]="isSelecionado(item)" value="{{item.valor}}">{{item.texto}}</option>
-  </select>
-</div>
-
