@@ -2,6 +2,7 @@ package br.com.unbhelp.servicos;
 
 import br.com.unbhelp.dao.TurmaDAO;
 import br.com.unbhelp.models.Turma;
+import br.com.unbhelp.models.TurmaRanking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,6 +45,10 @@ public class TurmaServico {
             throw new NoSuchElementException("Turma não encontrada.");
 
         dao.excluirTurma(id);
+    }
+
+    public List<TurmaRanking> getRankingTurmas(){
+        return dao.getRankingTurmas();
     }
 
     private void validarCamposObrigatorios(Turma turma) {

@@ -1,7 +1,9 @@
 package br.com.unbhelp.dao;
 
+import br.com.unbhelp.mapper.TurmaRankingRowMapper;
 import br.com.unbhelp.mapper.TurmaRowMapper;
 import br.com.unbhelp.models.Turma;
+import br.com.unbhelp.models.TurmaRanking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -50,6 +52,11 @@ public class TurmaDAO {
     public void excluirTurma(Integer id) {
         String sql = "DELETE FROM turmas WHERE id = ?";
         jdbc.update(sql, id);
+    }
+
+    public List<TurmaRanking> getRankingTurmas(){
+        String sql = "SELECT * FROM turmas_melhores_avaliadas;";
+        return jdbc.query(sql, new TurmaRankingRowMapper());
     }
     
 }

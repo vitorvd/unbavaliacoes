@@ -22,6 +22,8 @@ import { ListagemProfessoresComponent } from './pages/listagem-professores/lista
 import { CadastroProfessorComponent } from './pages/cadastro-professor/cadastro-professor.component';
 import { CadastroAvaliacaoProfessorComponent } from './pages/cadastro-avaliacao-professor/cadastro-avaliacao-professor.component';
 import { ListagemAvaliacaoProfessorComponent } from './pages/listagem-avaliacao-professor/listagem-avaliacao-professor.component';
+import { RankingTurmasComponent } from './pages/ranking-turmas/ranking-turmas.component';
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { ListagemAvaliacaoProfessorComponent } from './pages/listagem-avaliacao-
     CadastroProfessorComponent,
     CadastroAvaliacaoProfessorComponent,
     ListagemAvaliacaoProfessorComponent,
+    RankingTurmasComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { ListagemAvaliacaoProfessorComponent } from './pages/listagem-avaliacao-
     BrowserAnimationsModule,
     NoopAnimationsModule,
     ToastModule,
-    PaginatorModule
+    PaginatorModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

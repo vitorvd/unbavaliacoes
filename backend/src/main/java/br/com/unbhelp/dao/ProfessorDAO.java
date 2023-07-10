@@ -18,7 +18,7 @@ public class ProfessorDAO {
     private JdbcTemplate jdbc;
 
     public void criarProfessor(Professor professor) {
-        String sql = "INSERT INTO professores (nome, departamento_id) VALUES (?, ?)";
+        String sql = "CALL inserir_professor(?, ?)";
         jdbc.update(sql, professor.getNome(), professor.getDepartamentoId());
     }
 

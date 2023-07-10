@@ -1,0 +1,23 @@
+<div class="container">
+  <p-table [value]="turmas" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="caption" > RANKING DAS MELHORES TURMAS </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Número</th>
+        <th>Período</th>
+        <th>Professor</th>
+        <th>Disciplina</th>
+        <th>Média</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-turma>
+      <tr>
+        <td>{{ turma.id }}</td>
+        <td>{{ turma.periodo }}</td>
+        <td>{{ turma.professor }}</td>
+        <td>{{ turma.disciplina }}</td>
+        <td>{{ turma.media }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

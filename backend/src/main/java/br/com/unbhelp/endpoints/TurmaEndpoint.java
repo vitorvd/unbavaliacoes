@@ -1,6 +1,7 @@
 package br.com.unbhelp.endpoints;
 
 import br.com.unbhelp.models.Turma;
+import br.com.unbhelp.models.TurmaRanking;
 import br.com.unbhelp.servicos.TurmaServico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -61,5 +62,11 @@ public class TurmaEndpoint {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    
+
+    @GetMapping("/ranking")
+    public ResponseEntity<List<TurmaRanking>> getRanking() {
+        List<TurmaRanking> turmas = servico.getRankingTurmas();
+        return ResponseEntity.ok(turmas);
+    }
+
 }

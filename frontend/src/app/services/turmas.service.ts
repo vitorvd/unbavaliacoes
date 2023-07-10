@@ -27,6 +27,10 @@ export class TurmasService {
     return this.http.get(`${environment.API}/turma`);
   }
 
+  public getRankingTurmas(): Observable<any> {
+    return this.http.get(`${environment.API}/turma/ranking`);
+  }
+
   public deletarTurma(turmaId: number): Observable<any> {
     return this.http.delete(`${environment.API}/turma/${turmaId}`, { responseType: 'text' });
   }

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {CadastroEstudanteComponent} from "./pages/cadastro-estudante/cadastro-estudante.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {ListagemTurmasComponent} from "./pages/listagem-turmas/listagem-turmas.component";
@@ -14,6 +14,7 @@ import {
 import {
   CadastroAvaliacaoProfessorComponent
 } from "./pages/cadastro-avaliacao-professor/cadastro-avaliacao-professor.component";
+import {RankingTurmasComponent} from "./pages/ranking-turmas/ranking-turmas.component";
 
 const routes: Routes = [
   {path: "auth", component: LoginComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "turmas/avaliacoes", component: ListagemAvaliacoesTurmaComponent},
   {path: "turmas/avaliacoes/cadastrar", component: CadastroAvaliacaoTurmaComponent},
   {path: "turmas/avaliacoes/editar", component: CadastroAvaliacaoTurmaComponent},
+  {path: "turmas/ranking", component: RankingTurmasComponent},
   {path: "professores", component: ListagemProfessoresComponent},
   {path: "professores/cadastrar", component: CadastroProfessorComponent},
   {path: "professores/editar", component: CadastroProfessorComponent},
