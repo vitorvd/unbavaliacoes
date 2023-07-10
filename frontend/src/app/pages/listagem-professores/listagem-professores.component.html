@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="filtro" *ngIf="estudanteService.isAdministrador()">
+    <button-custom texto="Adicionar Professor" (click)="abrirTelaCriarProfessor()"></button-custom>
+  </div>
+  <div class="card" *ngFor="let professor of professores">
+    <div class="cabecalho">
+      <span class="titulo">{{professor.nome}}</span>
+      <div class="botoes" *ngIf="estudanteService.isAdministrador()">
+        <span (click)="editarProfessor(professor)">Editar</span>
+        <span (click)="deletarProfessor(professor.id)">Excluir</span>
+      </div>
+    </div>
+    <div class="conteudo">
+      <span (click)="abrirTelaDeAvaliacoesDoProfessor(professor)">Ver avaliações</span>
+    </div>
+  </div>
+</div>

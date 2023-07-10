@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #212529;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.5);
+}
+
+.titulo {
+  font-weight: 800;
+  font-size: 28px;
+  color: #DEE2E6;
+  margin-bottom: 30px;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-custom:first-child {
+  margin-right: 15px;
+}
+
+.aviso {
+  color: #DEE2E6;
+  font-size: 16px;
+}
+
+.aviso > a {
+  font-weight: bolder;
+  color: #FFFFFF;
+  cursor: pointer;
+}
