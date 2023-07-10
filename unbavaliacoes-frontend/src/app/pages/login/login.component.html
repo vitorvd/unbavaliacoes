@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card">
+    <span class="titulo">Autenticar</span>
+    <form class="conteudo" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <input-custom label="Matricula" [formGroup]="formLogin" formName="matricula"></input-custom>
+      <input-custom label="Senha" type="password" [formGroup]="formLogin" formName="senha"></input-custom>
+      <button-custom texto="Autenticar"></button-custom>
+    </form>
+    <span class="aviso">Não possui conta? Cadastre-se <a routerLink="/cadastrar">aqui</a>!</span>
+  </div>
+</div>

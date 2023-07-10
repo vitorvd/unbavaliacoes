@@ -1,0 +1,20 @@
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu'><label></label>
+  <ul>
+    <div class="esquerda">
+      <li><a href='#'>Home</a></li>
+      <li><a href='/turmas'>Turmas</a></li>
+      <li><a href='/professores'>Professores</a></li>
+      <li><a class='dropdown-arrow' href='#'>Rankings</a>
+        <ul class='sub-menus'>
+          <li><a href='#'>Turmas</a></li>
+          <li><a href='#'>Professores</a></li>
+        </ul>
+      </li>
+    </div>
+    <div class="direta">
+      <li *ngIf="!estudanteService.isAutenticado()"><a href='/auth'>Logar</a></li>
+      <li *ngIf="estudanteService.isAutenticado()"><a href='/auth' (click)="logout()">Logout</a></li>
+    </div>
+  </ul>
+</nav>

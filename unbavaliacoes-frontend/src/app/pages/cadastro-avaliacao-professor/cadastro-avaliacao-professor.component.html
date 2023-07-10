@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card">
+    <span class="titulo">{{isViewEdicao ? "Edição" : "Cadastro"}} de Avaliação do Professor</span>
+    <form class="conteudo" [formGroup]="formCadastroAvaliacao" (ngSubmit)="onSubmit()">
+      <input-custom label="Avaliação" placeholder="Eu não gostei dessa turma devido..." [formGroup]="formCadastroAvaliacao" formName="avaliacao"></input-custom>
+      <input-custom type="number" label="Nota" placeholder="De 0 até 5" [formGroup]="formCadastroAvaliacao" formName="nota"></input-custom>
+      <button-custom [texto]="getTextoBotao()"></button-custom>
+    </form>
+  </div>
+</div>
