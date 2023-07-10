@@ -5,6 +5,8 @@ import br.com.unbhelp.dao.DisciplinaProfessorDAO;
 import br.com.unbhelp.dao.ProfessorDAO;
 import br.com.unbhelp.models.DisciplinaProfessor;
 import br.com.unbhelp.models.Professor;
+import br.com.unbhelp.models.ProfessorRanking;
+import br.com.unbhelp.models.TurmaRanking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,6 +62,10 @@ public class ProfessorServico {
             throw new NoSuchElementException("Professor não encontrada.");
 
         dao.excluirProfessor(id);
+    }
+
+    public List<ProfessorRanking> getRankingProfessores(){
+        return dao.getRankingProfessores();
     }
 
     private void validarCamposObrigatorios(Professor professor) {

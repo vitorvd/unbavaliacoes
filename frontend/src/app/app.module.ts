@@ -24,6 +24,7 @@ import { CadastroAvaliacaoProfessorComponent } from './pages/cadastro-avaliacao-
 import { ListagemAvaliacaoProfessorComponent } from './pages/listagem-avaliacao-professor/listagem-avaliacao-professor.component';
 import { RankingTurmasComponent } from './pages/ranking-turmas/ranking-turmas.component';
 import {TableModule} from "primeng/table";
+import { RankingProfessoresComponent } from './pages/ranking-professores/ranking-professores.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {TableModule} from "primeng/table";
     CadastroAvaliacaoProfessorComponent,
     ListagemAvaliacaoProfessorComponent,
     RankingTurmasComponent,
+    RankingProfessoresComponent,
   ],
   imports: [
     BrowserModule,

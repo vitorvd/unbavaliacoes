@@ -111,6 +111,12 @@ public class Database implements CommandLineRunner {
                 "GROUP BY t.id, t.periodo, t.disciplina_id, d.nome, t.professor_id, p.nome " +
                 "ORDER BY media_avaliacoes DESC;");
 
+        jdbc.execute("CREATE OR REPLACE VIEW professores_melhores_avaliadas AS " +
+                "SELECT p.id, p.nome, AVG(a.nota) AS media_avaliacoes " +
+                "FROM professores p " +
+                "INNER JOIN avaliacoes_professores a ON p.id = a.id_professor " +
+                "GROUP BY p.id, p.nome " +
+                "ORDER BY media_avaliacoes DESC;");
     }
 
 }

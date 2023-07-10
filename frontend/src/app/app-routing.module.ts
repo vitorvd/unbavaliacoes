@@ -15,6 +15,7 @@ import {
   CadastroAvaliacaoProfessorComponent
 } from "./pages/cadastro-avaliacao-professor/cadastro-avaliacao-professor.component";
 import {RankingTurmasComponent} from "./pages/ranking-turmas/ranking-turmas.component";
+import {RankingProfessoresComponent} from "./pages/ranking-professores/ranking-professores.component";
 
 const routes: Routes = [
   {path: "auth", component: LoginComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path: "professores/editar", component: CadastroProfessorComponent},
   {path: "professores/avaliacoes", component: ListagemAvaliacaoProfessorComponent},
   {path: "professores/avaliacoes/cadastrar", component: CadastroAvaliacaoProfessorComponent},
-  {path: "professores/avaliacoes/editar", component: CadastroAvaliacaoProfessorComponent}
+  {path: "professores/avaliacoes/editar", component: CadastroAvaliacaoProfessorComponent},
+  {path: "professores/ranking", component: RankingProfessoresComponent},
 ];
 
 @NgModule({

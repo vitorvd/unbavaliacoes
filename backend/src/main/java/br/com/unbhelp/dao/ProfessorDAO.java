@@ -1,9 +1,9 @@
 package br.com.unbhelp.dao;
 
+import br.com.unbhelp.mapper.ProfessorRankingRowMapper;
 import br.com.unbhelp.mapper.ProfessorRowMapper;
-import br.com.unbhelp.mapper.TurmaRowMapper;
 import br.com.unbhelp.models.Professor;
-import br.com.unbhelp.models.Turma;
+import br.com.unbhelp.models.ProfessorRanking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -62,6 +62,11 @@ public class ProfessorDAO {
     public void excluirProfessor(Integer id) {
         String sql = "DELETE FROM professores WHERE id = ?";
         jdbc.update(sql, id);
+    }
+
+    public List<ProfessorRanking> getRankingProfessores(){
+        String sql = "SELECT * FROM professores_melhores_avaliadas;";
+        return jdbc.query(sql, new ProfessorRankingRowMapper());
     }
     
 }

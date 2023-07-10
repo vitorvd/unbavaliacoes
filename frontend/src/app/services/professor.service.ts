@@ -27,6 +27,10 @@ export class ProfessorService {
     return this.http.get(`${environment.API}/professor`);
   }
 
+  public getRankingProfessores(): Observable<any> {
+    return this.http.get(`${environment.API}/professor/ranking`);
+  }
+
   public deletarProfessor(professorId: number): Observable<any> {
     return this.http.delete(`${environment.API}/professor/${professorId}`, { responseType: 'text' });
   }

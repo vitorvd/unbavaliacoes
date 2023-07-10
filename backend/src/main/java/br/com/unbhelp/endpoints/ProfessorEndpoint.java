@@ -1,6 +1,8 @@
 package br.com.unbhelp.endpoints;
 
 import br.com.unbhelp.models.Professor;
+import br.com.unbhelp.models.ProfessorRanking;
+import br.com.unbhelp.models.TurmaRanking;
 import br.com.unbhelp.servicos.ProfessorServico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -60,6 +62,12 @@ public class ProfessorEndpoint {
         } catch (NoSuchElementException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
+
+    @GetMapping("/ranking")
+    public ResponseEntity<List<ProfessorRanking>> getRanking() {
+        List<ProfessorRanking> professores = servico.getRankingProfessores();
+        return ResponseEntity.ok(professores);
     }
 
 }
