@@ -43,6 +43,7 @@ export class CadastroEstudanteComponent implements OnInit{
         }))
         .subscribe(value => {
           this.messageService.add({ severity: 'success', summary: 'Sucesso', detail: value });
+          this.router.navigateByUrl("/auth");
       });
     }
   }

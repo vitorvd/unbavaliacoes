@@ -18,6 +18,7 @@ import {RankingTurmasComponent} from "./pages/ranking-turmas/ranking-turmas.comp
 import {RankingProfessoresComponent} from "./pages/ranking-professores/ranking-professores.component";
 
 const routes: Routes = [
+  {path: "", redirectTo: "/auth", pathMatch: "full"},
   {path: "auth", component: LoginComponent},
   {path: "cadastrar", component: CadastroEstudanteComponent},
   {path: "turmas", component: ListagemTurmasComponent},
