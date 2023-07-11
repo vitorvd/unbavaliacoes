@@ -96,6 +96,7 @@ export class CadastroProfessorComponent implements OnInit, OnDestroy {
     this.professor.departamentoId = Number(this.formCadastroProfessor.value.departamento)
 
     if (this.isViewEdicao) {
+      console.log(`Professor: ${JSON.stringify(this.professor)}`)
       this.service.editarProfessor(this.professor).subscribe(value => {
         this.messageService.add({severity: 'success', summary: 'Sucesso', detail: value});
         this.router.navigateByUrl("/professores")

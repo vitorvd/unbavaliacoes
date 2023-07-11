@@ -22,10 +22,6 @@ public class AvaliacaoProfessorServico {
     public void criarAvaliacaoProfessor(AvaliacaoProfessor avaliacaoTurma) {
         validarCamposObrigatorios(avaliacaoTurma);
 
-        Estudante estudante = estudanteDAO.buscarEstudante(avaliacaoTurma.getMatriculaEstudante());
-        if (estudante == null || !estudante.getAdministrador())
-            throw new IllegalStateException("O estudante precisa ser um administrador para cadastrar uma avaliação.");
-
         dao.criarAvaliacaoProfessor(avaliacaoTurma);
     }
 
@@ -39,10 +35,6 @@ public class AvaliacaoProfessorServico {
 
     public void atualizarAvaliacaoProfessor(AvaliacaoProfessor avaliacaoTurma) {
         validarCamposObrigatorios(avaliacaoTurma);
-
-        Estudante estudante = estudanteDAO.buscarEstudante(avaliacaoTurma.getMatriculaEstudante());
-        if (estudante == null || !estudante.getAdministrador())
-            throw new IllegalStateException("O estudante precisa ser um administrador para atualizar uma avaliação.");
 
         dao.atualizarAvaliacaoProfessor(avaliacaoTurma);
     }
