@@ -17,7 +17,7 @@ Passo a passo:
          1. Com isso, você terá dois containers rodando localmente: O backend do projeto e o banco de dados.
 
 Scripts SQL do Banco de dados:
-Obs.: Não é necessário a execução de nenhum desses scripts para rodar o projeto localmente, come exceção do "Inserção dos dados".
+- Não é necessário a execução de nenhum desses scripts para rodar o projeto localmente, com exceção do "Inserção dos dados".
 1. (Schema)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/tabelas.sql]
 2. (Inserção dos dados)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/data.sql]
 3. (Procedures)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/procedures.sql]
