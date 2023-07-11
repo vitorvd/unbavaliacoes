@@ -1,27 +1,15 @@
-# UnbavaliacoesFrontend
+# UnB Avaliacções (Frontend)
+Camada de apresentação, em Angular, do sistema da UnB Avaliações
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+# Como rodar localmente?
 
-## Development server
+- O que é necessário ter instalado?
+  - Node.js (a versão utilizada durante o desenvolvimento foi: 16.14.2);
+  - NPM (a versão utilizada durante o desenvolvimento foi: 8.5.0).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Passo a passo:
+1. No diretório raiz do projeto:
+   1. `npm install` - vai gerar a pasta de dependências do projeto (node_modules);
+   2. `npm start` ou `ng serve` - vai iniciar o projeto.
+   3. O servidor vai ficar disponível em: `http://localhost:4200/`
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
