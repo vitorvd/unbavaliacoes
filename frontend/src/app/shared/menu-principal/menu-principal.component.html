@@ -5,7 +5,7 @@
       <li><a href='#'>Home</a></li>
       <li><a href='/turmas'>Turmas</a></li>
       <li><a href='/professores'>Professores</a></li>
-      <li><a class='dropdown-arrow' href='#'>Rankings</a>
+      <li><a class='dropdown-arrow'>Rankings</a>
         <ul class='sub-menus'>
           <li><a href='/turmas/ranking'>Turmas</a></li>
           <li><a href='/professores/ranking'>Professores</a></li>
@@ -14,7 +14,7 @@
     </div>
     <div class="direta">
       <li *ngIf="!estudanteService.isAutenticado()"><a href='/auth'>Logar</a></li>
-      <li *ngIf="estudanteService.isAutenticado()"><a href='/auth' (click)="logout()">Logout</a></li>
+      <li *ngIf="estudanteService.isAutenticado()"><a href='/auth' (click)="logout()">Sair</a></li>
     </div>
   </ul>
 </nav>
