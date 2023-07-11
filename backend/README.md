@@ -18,6 +18,7 @@ Passo a passo:
 
 Scripts SQL do Banco de dados:
 - Não é necessário a execução de nenhum desses scripts para rodar o projeto localmente, com exceção do "Inserção dos dados".
+- O sistema cria automaticamente o Schema, Procedures e Views.
 1. (Schema)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/tabelas.sql]
 2. (Inserção dos dados)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/data.sql]
 3. (Procedures)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/procedures.sql]
