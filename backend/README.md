@@ -1,4 +1,4 @@
-# UnB Avaliacções
+# UnB Avaliacções (Backend)
 Projeto final desenvolvido para a conclusão da disciplia da banco de dados
 
 # Como rodar localmente?
@@ -15,3 +15,11 @@ Passo a passo:
       1. docker-compose build
       2. docker-compose up
          1. Com isso, você terá dois containers rodando localmente: O backend do projeto e o banco de dados.
+
+Scripts SQL do Banco de dados:
+Obs.: Não é necessário a execução de nenhum desses scripts para rodar o projeto localmente, come exceção do "Inserção dos dados".
+1. (Schema)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/tabelas.sql]
+2. (Inserção dos dados)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/data.sql]
+3. (Procedures)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/procedures.sql]
+4. (Views)[https://github.com/vitorvd/unbavaliacoes/blob/master/backend/src/main/resources/views.sql]
+
