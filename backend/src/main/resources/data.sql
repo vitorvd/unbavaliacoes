@@ -35,9 +35,9 @@ INSERT INTO turmas(periodo, disciplina_id, professor_id) VALUES ('2022.1', 2, 3)
 INSERT INTO turmas(periodo, disciplina_id, professor_id) VALUES ('2022.2', 3, 5);
 
 -- Tabela: AvaliacaoTurma
-INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('TP1 com o Chacon é bem didático!', 5, '211060737', 2);
-INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('C1 com João é difícil pra caramba', 2, 'admin', 3);
-INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('SN fica fácil com a Letícia!', 5, 'admin', 4);
+INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('TP1 com o Chacon é bem didático!', 5, '211060737', 1);
+INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('C1 com João é difícil pra caramba', 2, 'admin', 2);
+INSERT INTO avaliacoes_turmas(avaliacao, nota, matricula_estudante, id_turma) VALUES ('SN fica fácil com a Letícia!', 5, 'admin', 3);
 
 -- Tabela: AvaliacaoProfessor
 INSERT INTO avaliacoes_professores(avaliacao, nota, matricula_estudante, id_professor) VALUES ('Chacon é o mestre de SOLID!', 5, '211060737', 1);
