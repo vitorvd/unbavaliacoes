@@ -10,11 +10,12 @@ Projeto final desenvolvido para a conclusão da disciplia da banco de dados
 
 Passo a passo:
 1. No mesmo diretório que estiver a pasta "src":
-   1. Digite: mvn clean package -DskipTests=true. Isso vai gerar um build do projeto;
+   1. Digite: `mvn clean package -DskipTests=true`. Isso vai gerar um build do projeto;
    2. No mesmo diretório, digite:
-      1. docker-compose build
-      2. docker-compose up
+      1. `docker-compose build`
+      2. `docker-compose up`
          1. Com isso, você terá dois containers rodando localmente: O backend do projeto e o banco de dados.
+         2. O servidor ficará disponível em: `http://localhost:8080/`
 
 Scripts SQL do Banco de dados:
 - Não é necessário a execução de nenhum desses scripts para rodar o projeto localmente, com exceção do "Inserção dos dados".
