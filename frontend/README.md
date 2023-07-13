@@ -8,7 +8,7 @@ Camada de apresentação, em Angular, do sistema da UnB Avaliações
   - NPM (a versão utilizada durante o desenvolvimento foi: 8.5.0).
 
 Passo a passo:
-1. No diretório raiz do projeto:
+1. No mesmo diretório que estiver a pasta "src":
    1. `npm install` - vai gerar a pasta de dependências do projeto (node_modules);
    2. `npm start` ou `ng serve` - vai iniciar o projeto.
    3. O servidor vai ficar disponível em: `http://localhost:4200/`
